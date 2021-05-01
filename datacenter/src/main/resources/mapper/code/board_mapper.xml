@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easycerti.datacenter.dao.board_mapper">
+	
+ 	<select id="listAllCnt" resultType="Integer">
+		select count(*)
+	 		from
+ 			tbl_board
+	</select>
+	
+	<!--게시글 전체 목록-->
+	<!--com.easycerti.datacenter.model.BoardVO  -->
+	<select id="listAll" resultType="BoardVO">
+		select 
+ 		bno, 
+  		title,
+  		content,
+  		writer,
+  		regdate,
+  		viewcnt
+ 		from
+ 			tbl_board
+ 		where 1=1
+ 		order by bno
+	</select>
+	
+	<!-- 페이징 처리 후 게시글 조회 -->
+<!-- 	<select id="selectBoard" resultType="com.my.spring.domain.BoardVO">
+		SELECT * 
+			FROM (
+				SELECT ROWNUM RN, A.* 
+					FROM (
+							SELECT * 
+							FROM BOARD 
+							ORDER BY SEQ DESC 
+							) A
+					)
+		WHERE RN BETWEEN #{start} AND #{end}
+	</select>
+		 -->
+	<!--게시글 하나 상세보기  -->
+	<select id="read" resultType="BoardVO">
+		select 
+ 		bno, 
+  		title,
+  		content,
+  		writer,
+  		regdate,
+  		viewcnt
+ 		from
+ 			tbl_board
+ 		where bno =#{bno}
+	</select>
+	
+	<insert id="create" parameterType="BoardVO">
+	insert into tbl_board
+	(bno,title,content,writer)
+	values((select cast ((coalesce(max(bno)+1,1)) as integer)
+	 as bno 
+	from tbl_board ),
+	#{title},
+	#{content},
+	#{writer}
+	)
+	</insert>
+	
+	<delete id="deleteArticle" parameterType="BoardVO">
+		delete from tbl_board
+		where bno=#{bno}
+	</delete>
+	
+	<update id="updateArticle" parameterType="BoardVO">
+		update tbl_board set
+		title=#{title}
+		,content=#{content}
+		,writer=#{writer}
+		where bno=#{bno}
+	</update>
+	
+</mapper>

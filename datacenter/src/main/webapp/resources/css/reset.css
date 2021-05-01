@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* Reset */
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline;}
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
+	strong {font-weight: bold;}
+	html,body {width:100%;height:100%;}
+	html {overflow-y:scroll;font-size:10px;}
+	body {*word-break:break-all; -ms-word-break:break-all; line-height:1; letter-spacing:0px;}
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,button,input {margin:0;padding:0;}
+	/*body,h1,h2,h3,h4,input,button,textarea,select {font-family:'nanumSQ',Malgun-Gothic,arial,Helvetica,AppleSDGothicNeo,sans-serif; font-size:15px;}*/
+	body,h1,h2,h3,h4,input,button,textarea,select {font-family:Malgun-Gothic,arial,Helvetica,AppleSDGothicNeo,sans-serif; font-size:15px;}
+	img,fieldset,iframe {border:0 none;padding:0;}
+	ol,li {list-style:none;}
+	img {vertical-align:middle;}
+	a {color:#222;text-decoration:none}
+	a:hover{}
+	option{padding-right:6px}
+	i,em,address {font-style:normal;}
+	input,select,button {vertical-align:middle;}
+	label,button {cursor:pointer;}
+	button {margin:0;padding:0;}
+	hr{display:none;}
+	blockquote, q {quotes:none;}
+	blockquote:before, blockquote:after,q:before, q:after {content:”;	content:none;}
+	table {border-collapse:collapse;border-spacing:0;}
+	legend {*width:0;}
+	header,footer,nav,section,aside {display:block;}
+	.clear {*zoom:1;}
+	.clear:after {content:''; display:block; clear:both;}
+	.sr-only {position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;}
+
+/*font*/
+	@font-face {
+		font-family: 'Nanum Barun Gothic';
+		font-style: normal;
+		font-weight: 400;
+		src: url(../fonts/NanumBarunGothic.eot);
+		src: local('Nanum Barun Gothic'),
+				local('NanumBarunGothic'),
+				url(../fonts/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+				url(../fonts/NanumBarunGothic.woff2) format('woff2'),
+				url(../fonts/NanumBarunGothic.woff) format('woff'),
+				url(../fonts/NanumBarunGothic.ttf) format('truetype');
+	}
+
+

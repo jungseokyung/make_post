@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easycerti.datacenter.collectdata_mapper">
+	
+ 	<select id="selectCollectDataCheck" resultType="hashmap">
+		select 
+	 		collect_data_id, 
+	  		data_format,
+	  		data_type,
+	  		data_desc,
+	  		db_info,
+	  		file_info::jsonb,
+	  		user_id,
+	  		status,
+	  		hive_use,
+	  		project_name,
+	  		yyyy,
+	  		volumn,
+	  		graph_yn,
+	  		graph_column,
+	  		graph_run,
+	  		cust_name
+  		from
+  			collect_data_info
+  		where
+  			status=0
+	</select>
+</mapper>
