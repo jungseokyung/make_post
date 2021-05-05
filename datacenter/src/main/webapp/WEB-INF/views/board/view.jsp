@@ -160,9 +160,9 @@
   			</li>
   		</c:forEach>
   	</ol>
-  </div
+  </div>	
   <!--댓글 입력  -->
-  <h5>댓글 입력</h5>
+  <%-- <h5>댓글 입력</h5>
       <form name="form2"  method="post" action="${path }/datacenter/board/createComment"> 
       <div>내용
       	<textarea name="comment" id="comment" rows="1" cols="80" placeholder="댓글을 입력해주세요."></textarea><!--${dto.content }  -->  
@@ -176,15 +176,15 @@
    	  </div>
       <div style="width:650px; text-align: center;">
      	 <!--게시물번호를 hidden으로 처리  -->
-       <%--  <input type="hidden" name="cno" value="${cno}"> <!--${dto.bno}  -->--%>
+        <input type="hidden" name="cno" value="${cno}"> <!--${dto.bno}  -->
         <input type="hidden" name="bno" value="${dto.bno}">  <!--${dto.bno}  -->
-      <%--   <c:set var="bno" value="${bno }"</c:set>
-        <c:out value="${bno }" </c:out> --%>
-        <%-- <td><a href="${path}/datacenter/board/view?bno=${row.bno }"></a></td> --%>
+        <c:set var="bno" value="${bno }"</c:set>
+        <c:out value="${bno }" </c:out>
+        <td><a href="${path}/datacenter/board/view?bno=${row.bno }"></a></td>
       	<button type="button" id="btnSave">등록</button>
       	<button type="reset" id="btnCancel">취소</button>
       </div>
-      </form>
+      </form> --%>
     </div>    
   </div>
   
